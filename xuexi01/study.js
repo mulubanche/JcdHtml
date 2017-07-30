@@ -53,3 +53,110 @@ function showLabel08(){
 	var staticMessage = 'Hello Wolrd!';
 	label01.innerHTML = staticMessage.substring(4);
 }
+
+
+
+
+
+/////////////////////////////////
+/////////////////////////////////
+//数组处理
+function showArray01(){
+		var arr = ['123','sf',12,12.1,null,true];
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr[1];
+	}
+	function showArray02(){
+		var arr = ['123','sf',12,12.1,null,true];
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr.length;
+	}
+	function showArray03(){
+		var arr = ['123','sf',12,12.1,null,true];
+		arr[4] = 'jiang';
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray04(){
+		var arr = ['123','sf',12,12.1,null,true];
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr.indexOf(12);
+	}
+	function showArray05(){
+		var arr = ['123','sf',12,12.1,null,true];
+		var newArr = arr.slice(0,3);
+		var label = document.getElementById('showArrLabel');
+		label.innerHTML = newArr;
+	}
+	function showArray06(){
+		var arr = ['123','sf',12,12.1,null,true];
+		var newArr = arr.slice(3);
+		var label = document.getElementById('showArrLabel');
+		label.innerHTML = newArr;
+	}
+	function showArray07(){
+		var arr = ['123','sf',12,12.1,null,true];
+		arr.push('jiang','chao');
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray08(){
+		var arr = ['123','sf', 12, 12.1, null, true];
+		arr.pop();
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray09(){
+		var arr = ['123','sf', 12, 12.1, null, true];
+		arr.unshift('jiang','chao');
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray10(){
+		var arr = ['123','sf', 12, 12.1, null, true];
+		arr.shift();
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray11(){
+		var arr = ['B','T','E','M','Z','A'];
+		arr.sort();
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray12(){
+		var arr = ['123','sf', 12, 12.1, null, true];
+		arr.reverse();
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray13(){
+		var arr = ['123','sf', 12, 12.1, null, true];
+		arr.splice(2,3,'jiang','chao');
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray14(){
+		var arr = ['123','sf', 12, 12.1, null, true];
+		arr.splice(2,3);
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray15(){
+		var arr = ['123','sf', 12, 12.1, null, true];
+		arr.splice(2,0,'jiang','chao');
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr;
+	}
+	function showArray16(){
+		var arr1 = ['B','T','E','M','Z','A'];
+		var arr2 = ['123','sf', 12, 12.1, null, true];
+		var newArr = arr2.concat(arr1);
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = newArr;
+	}
+	function showArray17(){
+		var arr = ['123','sf', 12, 12.1, 'null', true];
+		var lable = document.getElementById('showArrLabel');
+		lable.innerHTML = arr.join('-');
+	}
