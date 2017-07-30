@@ -160,3 +160,68 @@ function showArray01(){
 		var lable = document.getElementById('showArrLabel');
 		lable.innerHTML = arr.join('-');
 	}
+
+
+
+
+
+/////////////////////////////////
+/////////////////////////////////
+//对象
+	function showObject01(){
+		var xiaoming={
+			name:'小明',
+			birth: 1990,
+			school: 'No.1 Middle School',
+   			height: 1.70,
+   			weight: 65,
+   			score: null
+		}
+		var label = document.getElementById('showObjectLabel');
+		label.innerHTML = `基本信息：姓名${xiaoming.name}	出生日期${xiaoming.birth} 就读学校${xiaoming.school} 身高${xiaoming.height}`;
+	}
+	function showObject02(){
+		var xiaoming={
+			name:'小明',
+			birth: 1990,
+			school: 'No.1 Middle School',
+   			height: 1.70,
+   			weight: 65,
+   			score: null
+		}
+		xiaoming.age = 22;
+		var label = document.getElementById('showObjectLabel');
+		label.innerHTML = `基本信息：姓名${xiaoming.name} 身高${xiaoming.height} 年龄${xiaoming.age}`;
+	}
+	function showObject03(){
+		var xiaoming={
+			name:'小明',
+			birth: 1990,
+			school: 'No.1 Middle School',
+   			height: 1.70,
+   			weight: 65,
+   			score: null
+		}
+		delete xiaoming.school;	
+		var label = document.getElementById('showObjectLabel');
+		label.innerHTML = `基本信息：姓名${xiaoming.name}	出生日期${xiaoming.birth} 就读学校${xiaoming.school} 身高${xiaoming.height}`;
+	}
+	function showObject04(){
+		var xiaoming={
+			name:'小明',
+			birth: 1990,
+			school: 'No.1 Middle School',
+   			height: 1.70,
+   			weight: 65,
+   			score: null
+		}
+		var retIn = 'toString' in xiaoming;
+		var retHax = 'name' in xiaoming;
+		var label = document.getElementById('showObjectLabel');
+		label.innerHTML = `判断toString是否为当前模型中的元素：${retIn}  判断name是否为当前模型中的元素：${retHax}`;
+	}
+
+
+
+
+
