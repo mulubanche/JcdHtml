@@ -1,89 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>数据类型</title>
-	<meta charset="UTF-8">
-	<script type="text/javascript" src="study.js"></script>
-	<style type="text/css">
-		.p_lable{font-size: 20px}
-	</style>
+	<title>目录</title>
+	<meta charset="utf-8">
 </head>
 <body>
-
-<p class="p_lable">字符串<p>
-<label id="showInfoLabel"></label><br>
-<button onclick=showLabel01()>多变量拼接字符串</button>
-<button onclick=showLabel02()>弹框显示多变量字符串</button>
-<br>
-<button onclick=showLabel03()>   大写   </button>
-<button onclick=showLabel04()>   小写   </button>
-<br>
-<button onclick=showLabel05()>字符'o'的位置</button>
-<button onclick=showLabel06()>字符串'wor'的位置</button>
-<br>
-<button onclick=showLabel07()>截取(0,6)的字符串</button>
-<button onclick=showLabel08()>截取(4)以后的字符串</button>
-<br>
-<hr>
-
-<p class="p_lable">数组 实例：['123', 'sf', 12, 12.1, null, true]</p>
-<label id="showArrLabel"></label><br>
-<button onclick=showArray01()>数组的粗应用</button>
-<button onclick=showArray02()>当前数组长度</button>
-<button onclick=showArray03()>修改第五个元素为’jiang‘</button>
-<br>
-<button onclick=showArray04()>数组的使用(indexOf(12),查找指定元素(12)的位置)</button>
-<br>
-<label style="font-size:14px,font-weight:bold">slice()如果不写截取参数，类似于把整个数组复制过去</label><br>
-<button onclick=showArray05()>数组中截取新数组(slice(0，3),0开始截取3个)</button>
-<button onclick=showArray06()>数组中截取新数组(slice(3),3开始到最后结束)</button>
-<br>
-<button onclick=showArray07()>添加一个元素’jiang,chao‘(push(),尾部添加元素)</button>
-<button onclick=showArray08()>删除一个元素'12'(pop(),删除最后一个元素)</button>
-<br>
-<button onclick=showArray09()>往头部添加元素(unshift())</button>
-<button onclick=showArray10()>删除头部第一个元素(shift())</button>
-<br>
-<label style="font-size:14px,font-weight:bold"">修改数组['B','T','E','M','Z','A']的顺序</label><br>
-<button onclick=showArray11()>修改数组的顺序(sort())</button>
-<br>
-<button onclick=showArray12()>翻转数组(reverse())</button>
-<br>
-<label>splice(),可以指定从哪个位置删除或添加</label><br>
-<button onclick=showArray13()>从索引2开始删除3个元素,然后再添加两个元素</button>
-<button onclick=showArray14()>从索引2开始删除3个元素,不添加元素</button>
-<button onclick=showArray15()>指定添加不删除</button>
-<br>
-<button onclick=showArray16()>concat()把指定的数组链接起来，如['B','T','E','M','Z','A']</button>
-<br>
-<button onclick=showArray17()>join()用指定的字符拼接数组，如join('-')</button>
-<br><hr>
-
-
-<p class="p_lable">对象</p>
-<label id="showObjectLabel"></label><br>
-<button onclick=showObject01()>简单显示一下小明对象的数据</button>
-<button onclick=showObject02()>添加一个名为age的数据模型</button>
-<button onclick=showObject03()>删除一个名为school的数据模型</button><br>
-<button onclick=showObject04()>判断模型是否有当前元素(in和hasOwnProperty,in判断的包括继承的,hasOwnProperty判断的只是当前模型中是否包含)</button>
-<br><hr>
-
-
-<p class="p_lable">Map和Set</p>
-<label id="showMapOrSetLabel"></label><br>
-<button onclick=showMap01()>初步使用Map(Map类似于字典使用)</button>
-
-
-
-
-
-
-<script type="text/javascript">
-	function showMap01(){
-		var label = document.getElementById('showMapOrSetLabel');
-		var obj = new Map([['jiang',23], ['chao', 56], ['du',62]]);
-		label.innerHTML = obj.get('chao');
-	}
-</script>
+	<dir>
+		<li><a href="jichu.html">基础知识</a></li>
+		<li><a href="hanshu.html">函数</a></li>
+	</dir>
 </body>
 </html>

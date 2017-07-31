@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>函数的定义与调用</p>
+	<label id="hanshuLabel"></label><br>
+	<button onclick=showHanshu01()>函数的定义</button><br>
+	<button onclick=showHanshu02()>arguments获取传入参数的总数</button>
+	<button onclick=showHanshu03()>arguments的另一种方式</button>
+
+	<script type="text/javascript">
+		function showHanshu01(){
+			var s = jisuanmianji(3,5);
+			var label = document.getElementById('hanshuLabel');
+			label.innerHTML = `面积=${s}`;
+		}
+		function jisuanmianji(x,y){
+			return x*y;
+		}
+		function showHanshu02() {
+			foo(34,4,12,5);
+		}
+		function foo(a, b) {
+    		var i, rest = [];
+    		if (arguments.length > 2) {
+        		for (i = 2; i<arguments.length; i++) {
+            		rest.push(arguments[i]);
+        		}
+    		}
+    		var label = document.getElementById('hanshuLabel');
+			label.innerHTML = `a=${a}, b=${b}, ${rest}`;
+		}
+		function showHanshu03() {
+			foo1(12,4,62,15,0);
+		}
+		function foo1(a, b, ...rest) {
+			var label = document.getElementById('hanshuLabel');
+			label.innerHTML = `a=${a}, b=${b}, ${rest}`;
+		}
+	</script>
+</body>
+</html>
