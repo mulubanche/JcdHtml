@@ -225,3 +225,140 @@ function showArray01(){
 
 
 
+	/////////////////////////////////
+	/////////////////////////////////
+	//函数
+	function showHanshu01(){
+		var s = jisuanmianji(3,5);
+		var label = document.getElementById('hanshuLabel');
+		label.innerHTML = `面积=${s}`;
+	}
+	function jisuanmianji(x,y){
+		return x*y;
+	}
+	function showHanshu02() {
+		foo(34,4,12,5);
+	}
+	function foo(a, b) {
+	var i, rest = [];
+    if (arguments.length > 2) {
+    	for (i = 2; i<arguments.length; i++) {
+           	rest.push(arguments[i]);
+        	}
+    	}
+    	var label = document.getElementById('hanshuLabel');
+		label.innerHTML = `a=${a}, b=${b}, ${rest}`;
+	}
+	function showHanshu03() {
+		foo1(12,4,62,15,0);
+	}
+	function foo1(a, b, ...rest) {
+		var label = document.getElementById('hanshuLabel');
+		label.innerHTML = `a=${a}, b=${b}, ${rest}`;
+	}
+
+		///高阶函数实例
+		function gaojieHS01() {
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = showMathABS(-5,8,Math.abs);
+			// label.innerHTML = 'hello world';
+		}
+		function showMathABS(x,y,f){
+			return f(x)+f(y);
+		}
+		///map实例
+		function gaojieHS02() {
+			var arr = [1,2,3,4,5,6,7,8,9];
+			var newarr = arr.map(sex);
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = newarr;
+			function sex(x){
+				return x*x;
+			}
+		}
+		//reduce实例
+		function gaojieHS03() {
+			//这个函数必须接收两个参数
+			//效果为累计计算一类
+			var nums = [1,2,4,5,8,9,13];
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = nums.reduce(sex);
+			function sex(x,y){
+				return x+y;
+			}
+		}
+
+		//练习题
+		function gaojieHS04() {
+			var nums = [1,2,3,4,5];
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = nums.reduce(function (x,y){return x*y});
+		}
+		function gaojieHS05() {
+			var nums = [1, 3, 5, 7, 9];
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = nums.reduce(function (x,y){return x*10+y});
+		}
+		function gaojieHS06() {
+			var num = 13579;
+			var arr = [];
+			while(num>=1){
+				arr.push(Math.floor(num%10));
+				num = num/10;
+			}
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = arr.reverse();
+		}
+		function gaojieHS07() {
+			var nums = ['1','2','3'];
+			var label = document.getElementById('hanshuGJLabel');
+			// label.innerHTML = nums.map(function (x,y){return `'${x}'+'${y}'`;});
+			label.innerHTML = nums.map(Number);
+		}
+		function gaojieHS08() {
+			//筛选[1,2,3,4,5,6,7,8,9]中能被2整除的
+			var nums = [1,2,3,4,5,6,7,8,9,10];
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = nums.filter(function (x){return x%2==0;})
+		}
+		function gaojieHS09() {
+			var arr = ['apple', 'strawberry', 'banana', 'pear', 'apple', 'orange', 'orange', 'strawberry'];
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = arr.filter(function (element, index, self){return self.indexOf(element)==index;});
+		}
+
+		//sort的使用
+		function gaojieHS10() {
+			var nums = [1,10,2,20];
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = nums.sort(function (x,y){if(x<y){return -1;}else if(x>y){return 1;}else{return 0;}})
+		}
+		function gaojieHS11() {
+			var arr = ['Google', 'apple', 'Microsoft'];
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = arr.sort(function (x,y) {
+				var x1 = x.toUpperCase();
+				var x2 = y.toUpperCase();
+				if (x1<x2) {return -1;}
+				else if(x1>x2) {return 1;}
+				else {return 0;}
+			})
+		}
+
+		//闭包
+		function gaojieHS12() {
+			function kaifang(n) {
+				return function (x) {
+					return Math.pow(x, n);	
+				}
+			}
+			var pow1 = kaifang(3);
+			var pow2 = kaifang(2);
+			var label = document.getElementById('hanshuGJLabel');
+			label.innerHTML = `2^3=${pow1(2)}, 3^2=${pow2(3)}`;
+		}
+
+
+
+
+
